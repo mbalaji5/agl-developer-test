@@ -8,46 +8,10 @@ import { Pet } from './service/pet.model';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
- 
-  maleCat:Array<string>;
-  femaleCat:Array<string>;
-  peopleData:Array<People>;
-  
-  constructor(private peopleService:PeopleService){
-    this.maleCat=new Array<string>();
-    this.femaleCat=new Array<string>();
-    this.peopleData=new Array<People>();
-  }
+export class AppComponent implements OnInit {
+  constructor(private peopleService: PeopleService) { }
 
-  ngOnInit()
-  {
-    this.peopleService.getpeople().subscribe(response=>{
-      if(response){
-        this.peopleData=response;
-        this.formData();
-      }
-    });
+  ngOnInit() {
+    this.peopleService.getpeople().subscribe();
   }
-
-  formData(){
-    this.peopleData.forEach(people=>{
-      if(people.pets){
-        if(people.gender=="Male")
-          { 
-            people.pets.forEach(pet=>{ pet.type=="Cat"?this.maleCat.push(pet.name):""});
-        
-          }else if(people.gender=="Female")
-          {
-            people.pets.forEach(
-              pet=>{
-              pet.type=="Cat"?this.femaleCat.push(pet.name):"";
-            });
-          }
-      }
-    });
-  this.maleCat.sort();
-  this.femaleCat.sort();
-  }
-  
 }

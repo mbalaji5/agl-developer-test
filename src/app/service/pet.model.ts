@@ -1,5 +1,4 @@
 export class Pet {
-name:string;
-type:string;
-
+name: string;
+type: string;
 }
