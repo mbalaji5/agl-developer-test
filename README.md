@@ -14,16 +14,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Out Put Sample
 
-Male
-    Garfield
-    Jim
-    Max
-    Tom
-Female
-    Garfield
-    Simba
-    Tabby
     
     
