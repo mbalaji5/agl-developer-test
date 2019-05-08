@@ -2,11 +2,11 @@
 <div>Male</div>
 
 <ul>
-  <li *ngFor="let petname of maleCat">{{ petname }}</li>
+  <li *ngFor="let malepetname of peopleService.maleOwnerCat" class="malepetname">{{ malepetname }}</li>
    
 </ul>
 <div>Female</div>
 
 <ul>
-  <li *ngFor="let petname of femaleCat">{{ petname }}</li>  
+  <li *ngFor="let femalepetname of peopleService.femaleOnerCat" class="femalepetname">{{ femalepetname }}</li>  
 </ul>

@@ -8,9 +8,13 @@ describe('workspace-project App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display Male Ower Pet Name', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to tests!');
+    expect(page.getMaleName()).toEqual(['Garfield', 'Jim', 'Max', 'Tom']);
+  });
+  it('should display Female Owner Pet Name', () => {
+    page.navigateTo();
+    expect(page.getFemaleName()).toEqual(['Garfield', 'Simba', 'Tabby']);
   });
 
   afterEach(async () => {
